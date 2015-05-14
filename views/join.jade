@@ -1,0 +1,94 @@
+extends _level-one
+
+block head
+  meta(name="description",content="...")
+
+block title
+  | 加入行動 | 
+
+block content
+  #join.horizontal.wrap
+    .horizontal.vertical.padding
+      .ui.three.doubling.cards
+        .card
+          .image
+            img(src='img/logo.png')
+          .content
+            .header project name
+            .meta
+              a meta
+            .description description
+          .ui.bottom.attached.two.buttons
+            .ui.green.button
+              i.icon.money
+              | 贊助專案
+            .ui.yellow.button
+              i.icon.pointing.right
+              | 加入志工
+        .card
+          .image
+            img(src='img/logo.png')
+          .content
+            .header project name
+            .meta
+              a meta
+            .description description
+          .ui.bottom.attached.two.buttons
+            .ui.green.button
+              i.icon.money
+              | 贊助專案
+            .ui.yellow.button
+              i.icon.pointing.right
+              | 加入志工
+        .card
+          .image
+            img(src='img/logo.png')
+          .content
+            .header project name
+            .meta
+              a meta
+            .description description
+          .ui.bottom.attached.two.buttons
+            .ui.green.button
+              i.icon.money
+              | 贊助專案
+            .ui.yellow.button
+              i.icon.pointing.right
+              | 加入志工
+        .card
+          .image
+            img(src='img/logo.png')
+          .content
+            .header project name
+            .meta
+              a meta
+            .description description
+          .ui.bottom.attached.two.buttons
+            .ui.green.button
+              i.icon.money
+              | 贊助專案
+            .ui.yellow.button
+              i.icon.pointing.right
+              | 加入志工
+        .card
+          .image
+            img(src='img/logo.png')
+          .content
+            .header project name
+            .meta
+              a meta
+            .description description
+          .ui.bottom.attached.two.buttons
+            .ui.green.button
+              i.icon.money
+              | 贊助專案
+            .ui.yellow.button
+              i.icon.pointing.right
+              | 加入志工
+
+
+block script
+  script.
+    $(document).ready(function(){
+      $("[href*='join']").addClass("active");
+    });

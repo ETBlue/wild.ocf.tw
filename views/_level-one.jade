@@ -6,59 +6,55 @@ block css
 block body
 
   nav#topbar
-    .ui.borderless.secondary.menu.simplified.horizontal.wrap
+    //-.ui.borderless.secondary.menu.simplified.horizontal.wrap
+    .ui.borderless.menu.simplified.horizontal.wrap
       .desktop.laptop.tablet
         a.logo.item(href="index")
-          img.logo.image(src="img/logo.jpg")
-        a.item(href="book")
-          | 書
-        a.item(href="author")
-          | 作者
-        a.item(href="event")
-          | 活動
+          img.logo.image(src="img/logo.png")
+        a.item(href="events")
+          | 近期活動
+        a.item(href="projects")
+          | 專案與成果
           //-.ui.red.label 1
         //-a.item(href="about")
           //i.icon.info
           | 關於
       .phone
         .ui.simple.dropdown.logo.item
-          img.logo.image(src="img/logo.jpg")
+          img.logo.image(src="img/logo.png")
           .menu
-            a.item(href="book")
-              | 書
-            a.item(href="author")
-              | 作者
-            a.item(href="event")
-              | 活動
-              .ui.red.label 1
+        a.item(href="events")
+          | 近期活動
+        a.item(href="projects")
+          | 專案與成果
       .right.menu
         .desktop.laptop
-          a.right.item
-            i.icon.user
-            | 登入
-          .ui.simple.dropdown.right.item
+          a.item(href="join")
+            i.icon.pointing.right
+            | 加入行動
+          //-.ui.simple.dropdown.right.item
             i.icon.globe
             | 語言
             i.icon.dropdown
             .menu
               .item English
               .item 正體中文
-          .right.item
+          //-.right.item
             .ui.icon.input
               input(type='text',placeholder='')
               i.icon.search.link
         .tablet.phone
-          .ui.simple.dropdown.right.item
+          //-.ui.simple.dropdown.right.item
             i.icon.ellipsis.vertical
             .menu
-              a.item
-                i.icon.user
-                | 登入
               .item
                 .ui.icon.input
                   input(type='text',placeholder='')
                   i.icon.search.link
-          .ui.simple.dropdown.right.item
+          a.item(href="join")
+            i.icon.pointing.right
+            | 加入行動
+          //-.ui.simple.dropdown.right.item
             i.icon.globe
             .menu
               .item English
@@ -68,7 +64,8 @@ block body
   block content
 
   footer#bottombar
-    .ui.borderless.secondary.menu.simplified.horizontal.wrap
+    //-.ui.borderless.secondary.menu.simplified.horizontal.wrap
+    .ui.borderless.menu.simplified.horizontal.wrap
       a.item(href="about")
         span.phone
           i.icon.info
