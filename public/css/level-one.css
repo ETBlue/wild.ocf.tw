@@ -1,0 +1,190 @@
+.menu.simplified {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.menu.simplified .item:first-child, .menu.simplified .item:last-child {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+#topbar .ui.menu, #bottombar .ui.menu {
+  margin-bottom: 0;
+}
+#topbar .ui.menu .logo.image, #bottombar .ui.menu .logo.image {
+  width: 2rem;
+  display: inline;
+}
+#topbar .ui.menu .item, #bottombar .ui.menu .item {
+  padding: 1rem 0.8rem;
+}
+#topbar .ui.menu .item.logo, #bottombar .ui.menu .item.logo {
+  padding: 0.5rem 0.8rem;
+}
+#topbar .ui.menu .item.logo.dropdown.item > .icon, #bottombar .ui.menu .item.logo.dropdown.item > .icon {
+  padding-top: 0.5rem;
+}
+
+#home ul.bxslider {
+  margin: 0;
+}
+#home ul.bxslider img {
+  margin: 0 auto;
+}
+#home #promote li {
+  background-color: #333333;
+}
+
+#about #content {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: white;
+}
+#about #content h1 {
+  font-size: 2rem;
+}
+
+#news #header {
+  height: 10rem;
+  background-color: #f4f7d9;
+}
+
+#book #header .cover, #book #action .cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #333333;
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.8));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.8));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.8));
+}
+#book #header, #book #responses {
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#book #header {
+  position: relative;
+  background: url(http://news.readmoo.com/wp-content/uploads/2015/03/10481660_915317231823450_8962900920960691119_o-687x336.png) repeat-x center bottom, white;
+  text-align: center;
+}
+#book #header #labels {
+  position: absolute;
+  top: 0;
+  padding: 0.5rem 1rem;
+}
+#book #header .background {
+  height: 10rem;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+#book #header .background .image {
+  height: 10rem;
+  display: inline;
+}
+#book #header .cover {
+  opacity: 0.8;
+}
+#book #header .title {
+  position: absolute;
+  width: 100%;
+  bottom: 1.5rem;
+}
+#book #header .title .header {
+  color: #333333;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 1em;
+}
+#book .navigation {
+  background-color: white;
+  width: 100%;
+  position: relative;
+}
+#book #content {
+  background-color: rgba(253, 253, 250, 0.8);
+}
+#book #video {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#book #overview .ui.grid {
+  margin: 0;
+}
+#book #overview .ui.divider {
+  font-size: inherit;
+}
+#book #overview .words {
+  margin-bottom: 1rem;
+}
+#book #overview .words:last-child {
+  margin-bottom: 0;
+}
+#book #overview .author {
+  font-size: 1rem;
+  display: inline-block;
+  margin-left: 1rem;
+  color: #666666;
+}
+#book #overview #meta {
+  background-color: white;
+  border-top: 1px #dddddd solid;
+}
+#book #overview #meta .item .ui.label {
+  background-color: #fafafa;
+}
+#book #overview #meta .item .key {
+  font-weight: bold;
+}
+#book #overview #meta .item .value {
+  margin-left: 1rem;
+}
+#book #overview #meta .item .value .label {
+  margin-left: 1em;
+}
+#book #preview .ui.grid {
+  margin: 0;
+}
+#book #preview .hide.important {
+  display: none !important;
+}
+#book #behind .ui.grid {
+  margin: 0;
+}
+#book #behind h2.ui.horizontal.divider {
+  position: relative;
+  top: 1rem;
+  margin: 0 1rem 2rem 1rem;
+}
+#book #behind .ui.bottom.attached.black.transparent.label {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+#book #action {
+  background-color: white;
+  background: url(http://news.readmoo.com/wp-content/uploads/2015/03/10481660_915317231823450_8962900920960691119_o-687x336.png) repeat-x center bottom, white;
+  padding: 1rem;
+  min-height: 3rem;
+  position: relative;
+  text-align: right;
+}
+#book #action .item {
+  display: inline-block;
+}
+#book #action .cover {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  opacity: 1;
+}
+#book #action .share.widget {
+  margin-bottom: 1rem;
+}
+#book #responses {
+  background-color: rgba(221, 238, 255, 0.3);
+}

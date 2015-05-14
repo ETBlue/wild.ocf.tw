@@ -1,0 +1,80 @@
+extends _template
+
+block css
+  link(rel="stylesheet",href="css/level-one.css")
+
+block body
+
+  nav#topbar
+    .ui.borderless.secondary.menu.simplified.horizontal.wrap
+      .desktop.laptop.tablet
+        a.logo.item(href="index")
+          img.logo.image(src="img/logo.jpg")
+        a.item(href="book")
+          | 書
+        a.item(href="author")
+          | 作者
+        a.item(href="event")
+          | 活動
+          //-.ui.red.label 1
+        //-a.item(href="about")
+          //i.icon.info
+          | 關於
+      .phone
+        .ui.simple.dropdown.logo.item
+          img.logo.image(src="img/logo.jpg")
+          .menu
+            a.item(href="book")
+              | 書
+            a.item(href="author")
+              | 作者
+            a.item(href="event")
+              | 活動
+              .ui.red.label 1
+      .right.menu
+        .desktop.laptop
+          a.right.item
+            i.icon.user
+            | 登入
+          .ui.simple.dropdown.right.item
+            i.icon.globe
+            | 語言
+            i.icon.dropdown
+            .menu
+              .item English
+              .item 正體中文
+          .right.item
+            .ui.icon.input
+              input(type='text',placeholder='')
+              i.icon.search.link
+        .tablet.phone
+          .ui.simple.dropdown.right.item
+            i.icon.ellipsis.vertical
+            .menu
+              a.item
+                i.icon.user
+                | 登入
+              .item
+                .ui.icon.input
+                  input(type='text',placeholder='')
+                  i.icon.search.link
+          .ui.simple.dropdown.right.item
+            i.icon.globe
+            .menu
+              .item English
+              .item 正體中文
+        block topbar
+
+  block content
+
+  footer#bottombar
+    .ui.borderless.secondary.menu.simplified.horizontal.wrap
+      a.item(href="about")
+        span.phone
+          i.icon.info
+        span.desktop.laptop.tablet 關於 OCF.tw 野生官網
+      .right.menu
+        a.ui.button.item(target="_blank",href="http://ocf.tw/")
+          span.desktop.laptop.tablet  OCF.tw
+          | 官網
+          //-i.icon.globe

@@ -1,0 +1,169 @@
+@charset "UTF-8"
+@import compass/css3
+
+.menu.simplified
+  +border-radius(0)
+  +box-shadow(none)
+  .item:first-child, .item:last-child
+    +border-radius(0)
+
+#topbar, #bottombar
+  //background-color: #333
+  .ui.menu
+    margin-bottom: 0
+    .logo.image
+      width: 2rem
+      display: inline
+    .item
+      padding: 1rem 0.8rem
+      &.logo
+        padding: 0.5rem 0.8rem
+        &.dropdown.item
+          &>.icon
+            padding-top: 0.5rem
+
+// specific pages
+
+#home
+  ul.bxslider
+    margin: 0
+    img
+      margin: 0 auto
+  #promote
+    li
+      background-color: #333
+
+#about
+  #content
+    padding: 2rem 1rem
+    text-align: center
+    background-color: #FFF
+    h1
+      font-size: 2rem
+
+#news
+  #header
+    height: 10rem
+    background-color: rgba(244, 247, 217, 1)
+
+$theme-background: #fff
+$theme-front: #333
+$header-height: 10rem
+
+#book
+  .next.wrap
+    //margin-top: 1rem
+
+  #header, #action
+    .cover
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      color: $theme-front
+      +background-image(linear-gradient(rgba($theme-background,0.3), rgba($theme-background,0.3) 50%, rgba($theme-background,0.8)))
+
+  #header, #responses
+    +box-shadow(0 0 10px rgba(#000,0.3))
+
+  #header
+    position: relative
+    +background(image-url("http://news.readmoo.com/wp-content/uploads/2015/03/10481660_915317231823450_8962900920960691119_o-687x336.png") repeat-x center bottom, rgba(#fff,1))
+    text-align: center
+    #labels
+      position: absolute
+      top: 0
+      padding: 0.5rem 1rem
+    .background
+      height: $header-height
+      text-overflow: clip
+      white-space: nowrap
+      //overflow-x: hidden
+      .image
+        height: $header-height
+        display: inline
+    .cover
+      opacity: 0.8
+    .title
+      position: absolute
+      width: 100%
+      bottom: 1.5rem
+      .header
+        color: $theme-front
+        font-size: 2.5rem
+        letter-spacing: 0.1rem
+        line-height: 1em
+
+  .navigation
+    background-color: $theme-background
+    width: 100%
+    position: relative
+
+  #content
+    background-color: rgba(#FDFDFA, 0.8)
+
+  #video
+    background-color: rgba(#000,0.05)
+
+  #overview
+    .ui.grid
+      margin: 0
+    .ui.divider
+      font-size: inherit
+    .words
+      margin-bottom: 1rem
+      &:last-child
+        margin-bottom: 0
+    .author
+      font-size: 1rem
+      display: inline-block
+      margin-left: 1rem
+      color: #666
+    #meta
+      background-color: rgba(#fff,1)
+      border-top: 1px #ddd solid
+      .item
+        .ui.label
+          background-color: rgba(#fafafa,1)
+        .key
+          font-weight: bold
+        .value
+          margin-left: 1rem
+          .label
+            margin-left: 1em
+
+  #preview
+    .toggle.index
+      //padding: 1rem 1rem 0 1rem
+    .ui.grid
+      margin: 0
+    .hide.important
+      display: none!important
+
+  #behind
+    .ui.grid
+      margin: 0
+    h2.ui.horizontal.divider
+      position: relative
+      top: 1rem
+      margin: 0 1rem 2rem 1rem
+    .ui.bottom.attached.black.transparent.label
+      background-color: rgba(#000,0.5)!important
+
+  #action
+    background-color: $theme-background
+    +background(image-url("http://news.readmoo.com/wp-content/uploads/2015/03/10481660_915317231823450_8962900920960691119_o-687x336.png") repeat-x center bottom, rgba(#fff,1))
+    padding: 1rem
+    min-height: 3rem
+    position: relative
+    text-align: right
+    .item
+      display: inline-block
+    .cover
+      +transform(rotate(180deg))
+      opacity: 1
+    .share.widget
+      margin-bottom: 1rem
+  #responses
+    background-color: rgba(#def,0.3)
