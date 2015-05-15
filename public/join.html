@@ -28,17 +28,16 @@
   <body>
     <nav id="topbar">
       <div class="ui borderless menu simplified horizontal wrap">
-        <div class="desktop laptop tablet"><a href="index" class="logo item"><img src="img/logo.png" class="logo image"/></a><a href="events" class="item">近期活動</a><a href="projects" class="item">專案與成果</a>
-        </div>
-        <div class="phone">
-          <div class="ui simple dropdown logo item"><img src="img/logo.png" class="logo image"/>
-            <div class="menu"></div>
-          </div><a href="events" class="item">近期活動</a><a href="projects" class="item">專案與成果</a>
+        <div class="desktop laptop"><a href="index" class="logo item"><img src="img/logo.png" class="logo image"/></a><a href="events" class="item">近期活動</a><a href="projects" class="item">專案與成果</a><a href="plans" class="item">工作計畫</a><a href="projects" class="item">贊助者</a></div>
+        <div class="tablet phone">
+          <div class="ui simple dropdown logo item"><img src="img/logo.png" class="logo image"/><i class="icon dropdown"></i>
+            <div class="menu"><a href="index" class="item">首頁</a><a href="events" class="item">近期活動</a><a href="projects" class="item">專案與成果</a><a href="plans" class="item">工作計畫</a><a href="projects" class="item">贊助者</a></div>
+          </div>
         </div>
         <div class="right menu">
           <div class="desktop laptop"><a href="join" class="item"><i class="icon pointing right"></i>加入行動</a>
           </div>
-          <div class="tablet phone"><a href="join" class="item"><i class="icon pointing right"></i>加入行動</a>
+          <div class="tablet phone"><a href="join" class="item"><i class="icon pointing right"></i></a>
           </div>
         </div>
       </div>
@@ -46,16 +45,13 @@
     <div id="join" class="horizontal wrap">
       <div class="horizontal vertical padding">
         <div class="ui three doubling cards">
-          <div class="card">
-            <div class="image"><img src="img/logo.png"/></div>
-            <div class="content">
-              <div class="header">project name</div>
-              <div class="meta"><a>meta</a></div>
-              <div class="description">description</div>
+          <div class="card"><a class="image"><img src="img/logo.png"/></a>
+            <div class="content"><a class="header">行政中心</a>
+              <div class="meta"><a>OCF基礎建設</a></div>
+              <div class="description">開設獨立帳戶、收款取款、對帳、製作報表、開立收據... 一點都不迷人的繁瑣的行政庶務，卻是在幕後默默支援所有專案、不可或缺的基礎建設。如果您無法決定要贊助哪個專案，就贊助我們吧！健康的行政中心讓所有專案都共同受益。</div>
             </div>
-            <div class="ui bottom attached two buttons">
+            <div class="ui bottom attached fluid buttons">
               <div class="ui green button"><i class="icon money"></i>贊助專案</div>
-              <div class="ui yellow button"><i class="icon pointing right"></i>加入志工</div>
             </div>
           </div>
           <div class="card">
@@ -111,7 +107,7 @@
     </div>
     <footer id="bottombar">
       <div class="ui borderless menu simplified horizontal wrap"><a href="about" class="item"><span class="phone"><i class="icon info"></i></span><span class="desktop laptop tablet">關於 OCF.tw 野生官網</span></a>
-        <div class="right menu"><a target="_blank" href="http://ocf.tw/" class="ui button item"><span class="desktop laptop tablet"> OCF.tw</span>官網</a></div>
+        <div class="right menu"><a target="_blank" href="http://ocf.tw/" class="ui button item"><span class="desktop laptop tablet phone">OCF.tw 官網</span></a></div>
       </div>
     </footer>
     <script>

@@ -8,25 +8,17 @@ block body
   nav#topbar
     //-.ui.borderless.secondary.menu.simplified.horizontal.wrap
     .ui.borderless.menu.simplified.horizontal.wrap
-      .desktop.laptop.tablet
+      .desktop.laptop
         a.logo.item(href="index")
           img.logo.image(src="img/logo.png")
-        a.item(href="events")
-          | 近期活動
-        a.item(href="projects")
-          | 專案與成果
-          //-.ui.red.label 1
-        //-a.item(href="about")
-          //i.icon.info
-          | 關於
-      .phone
+        include -level-one-nav
+      .tablet.phone
         .ui.simple.dropdown.logo.item
           img.logo.image(src="img/logo.png")
+          i.icon.dropdown
           .menu
-        a.item(href="events")
-          | 近期活動
-        a.item(href="projects")
-          | 專案與成果
+            a.item(href="index") 首頁
+            include -level-one-nav
       .right.menu
         .desktop.laptop
           a.item(href="join")
@@ -53,7 +45,6 @@ block body
                   i.icon.search.link
           a.item(href="join")
             i.icon.pointing.right
-            | 加入行動
           //-.ui.simple.dropdown.right.item
             i.icon.globe
             .menu
@@ -72,6 +63,5 @@ block body
         span.desktop.laptop.tablet 關於 OCF.tw 野生官網
       .right.menu
         a.ui.button.item(target="_blank",href="http://ocf.tw/")
-          span.desktop.laptop.tablet  OCF.tw
-          | 官網
+          span.desktop.laptop.tablet.phone OCF.tw 官網
           //-i.icon.globe
