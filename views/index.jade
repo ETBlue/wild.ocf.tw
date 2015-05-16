@@ -1,17 +1,11 @@
 extends _level-one
 
-//-block head
-  meta(name="description",content="...")
-
-  // tabletop.js
-  script(type="text/javascript",src="assets/tabletop.js")
-      
-  // handlebars
-  script(type="text/javascript",src="assets/handlebars-v2.0.0.js")
+block subhead
+  meta(property="og:image",content="img/logo.png")
 
   // bxslider
-  link(rel="stylesheet",type="text/css",href="assets/jquery.bxslider/jquery.bxslider.css")
-  script(type="text/javascript",src="assets/jquery.bxslider/jquery.bxslider.min.js")
+  //link(rel="stylesheet",type="text/css",href="assets/jquery.bxslider/jquery.bxslider.css")
+  //script(type="text/javascript",src="assets/jquery.bxslider/jquery.bxslider.min.js")
 
 block title
 
@@ -21,6 +15,12 @@ block content
       ul.bxslider
 
 block script
+
+  script.
+    $(document).ready(function(){
+      $("[href*='index']").addClass("active");
+    });
+
   //-script.
     var gsheet_url = 'https://docs.google.com/spreadsheets/d/1RrLiqy3xId-zxhTmtsYvuTb6N5HCUgXVaEWHCeNwgr4/pubhtml',
         slide_html = '{{#each slides}}<li><img src="{{url}}" title="{{title}}" /></li>{{/each}}',

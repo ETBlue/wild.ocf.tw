@@ -1,0 +1,17 @@
+extends _level-one
+
+block subhead
+  meta(property="og:image",content="img/logo.png")
+
+block title
+  | 近期活動 | 
+
+block content
+  #events.horizontal.wrap
+
+block script
+  script.
+    $(document).ready(function(){
+      $("[href*='events']").addClass("active");
+    });
+
