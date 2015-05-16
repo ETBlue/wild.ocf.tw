@@ -1,0 +1,17 @@
+extends _level-one
+
+block subhead
+  meta(property="og:image",content="img/logo.png")
+
+block title
+  | 專案與成果 | 
+
+block content
+  #projects.horizontal.wrap
+
+block script
+  script.
+    $(document).ready(function(){
+      $("[href*='projects']").addClass("active");
+    });
+

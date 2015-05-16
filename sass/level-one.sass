@@ -1,6 +1,14 @@
 @charset "UTF-8"
 @import compass/css3
 
+// semantic ui
+
+$yellow: #f2c61f
+$orange: #e07b53
+$red: #d95c5c
+$green: #5bbd72
+$blue: #3b83c0
+
 .menu.simplified
   +border-radius(0)
   +box-shadow(none)
@@ -8,7 +16,7 @@
     +border-radius(0)
 
 #topbar, #bottombar
-  background-color: #fafafa
+  background-color: #f6f6f6
   .ui.menu
     margin-bottom: 0
     .logo.image
@@ -47,6 +55,16 @@
     background-color: rgba(244, 247, 217, 1)
 
 #join
+  #header
+    background-color: #fff
+  #title
+    background-color: $yellow
+    text-align: center
+    min-height: 8rem
+  #action
+    //background-color: #333
+  #subscribe
+    background-color: #333
   .card
     .image.photo
       height: 8rem
