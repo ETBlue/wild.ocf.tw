@@ -26,8 +26,8 @@ block body
             i.icon.pointing.right
             | 加入行動
           a.item(href="partners")
-            i.icon.pointing.right
-            | 加入行動
+            i.icon.announcement
+            | 媒體與合作夥伴
           //-.ui.simple.dropdown.right.item
             i.icon.globe
             | 語言
@@ -49,6 +49,8 @@ block body
                   i.icon.search.link
           a.item(href="join")
             i.icon.pointing.right
+          a.item(href="partners")
+            i.icon.announcement
           //-.ui.simple.dropdown.right.item
             i.icon.globe
             .menu
@@ -61,11 +63,13 @@ block body
   footer#bottombar
     //-.ui.borderless.secondary.menu.simplified.horizontal.wrap
     .ui.borderless.menu.simplified.horizontal.wrap
-      a.item(href="about")
-        span.phone
-          i.icon.info
-        span.desktop.laptop.tablet 關於 OCF.tw 野生官網
+      a.item(href='backers') 贊助者
+      a.item(href='records') 會議記錄
       .right.menu
+        a.item(href="about")
+          span.phone
+            i.icon.info
+          span.desktop.laptop.tablet 關於 OCF.tw 野生官網
         a.ui.button.item(target="_blank",href="http://ocf.tw/")
           span.desktop.laptop.tablet.phone OCF.tw 官網
           //-i.icon.globe

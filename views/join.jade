@@ -12,28 +12,35 @@ block content
       #title.horizontal.wrap
         .horizontal.vertical.padding
           h1.ui.header 加入行動
-    section#action
-      #subscribe.horizontal.wrap
-        .horizontal.vertical.padding
-          //-.ui.inverted.horizontal.divider 訂閱
-          .ui.four.column.stackable.grid
-            .column
-              a.ui.icon.labeled.button.red.fluid(href='https://groups.google.com/forum/#!forum/ocf-general')
-                i.icon.mail
-                | google groups
-            .column
-              a.ui.icon.labeled.button.blue.fluid(href='')
-                i.icon.calendar
-                | google calendar
-            .column
-              a.ui.icon.labeled.button.facebook.fluid(href='https://www.facebook.com/www.ocf.tw?fref=ts')
-                i.icon.facebook.page
-                | facebook page
-            .column
-              a.ui.icon.labeled.button.fluid.teal(href='')
-                i.icon.newspaper
-                | newsletter
+    //-section#action
     section#content.horizontal.wrap
+      .horizontal.vertical.padding
+        .ui.horizontal.divider 訂閱
+        .ui.six.column.doubling.grid
+          .column
+            a.ui.icon.labeled.button.facebook.fluid(href='https://www.facebook.com/www.ocf.tw?fref=ts')
+              i.icon.facebook.page
+              | 粉絲頁
+          .column
+            a.ui.icon.labeled.button.fluid.teal(href='')
+              i.icon.newspaper
+              | 電子報
+          .column
+            a.ui.icon.labeled.button.red.fluid(href='https://groups.google.com/forum/#!forum/ocf-general')
+              i.icon.mail
+              | 討論區
+          .column
+            a.ui.icon.labeled.button.blue.fluid(href='')
+              i.icon.calendar
+              | 日曆
+          .column
+            a.ui.icon.labeled.button.fluid(href='https://groups.google.com/forum/#!forum/ocf-general')
+              i.icon.text.file.outline
+              | 共筆
+          .column
+            a.ui.icon.labeled.button.fluid(href='https://groups.google.com/forum/#!forum/ocf-general')
+              i.icon.github
+              | 程式碼
       .horizontal.vertical.padding
         .ui.horizontal.divider 支援專案
         .ui.three.doubling.cards

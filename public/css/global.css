@@ -1,9 +1,9 @@
 @charset "UTF-8";
 html, body {
   font-family: "Noto Sans", "Noto Sans T Chinese", "微軟正黑體", sans-serif;
-  color: #666666;
+  color: #666;
   font-size: 18px;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
@@ -96,7 +96,7 @@ a, a:link {
 
 .spotlight {
   font-size: 1.2rem !important;
-  color: black;
+  color: #000;
 }
 
 .menu.bar {
@@ -132,7 +132,7 @@ a, a:link {
   }
 
   html, body {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 1440px) and (min-width: 840px) {
@@ -140,7 +140,7 @@ a, a:link {
     display: initial !important;
   }
 }
-@media screen and (max-width: 840px) and (min-width: 767px) {
+@media screen and (max-width: 840px) and (min-width: 768px) {
   .tablet {
     display: initial !important;
   }
@@ -149,7 +149,7 @@ a, a:link {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .phone {
     display: initial !important;
   }
