@@ -17,6 +17,8 @@ $blue: #3b83c0
 $hackpad: #53af98
 $github: #111
 
+// global
+
 .menu.simplified
   +border-radius(0)
   +box-shadow(none)
@@ -37,6 +39,9 @@ $github: #111
         &.dropdown.item
           &>.icon
             padding-top: 0.5rem
+
+#footer
+  background-color: #999
 
 // specific pages
 
@@ -65,9 +70,13 @@ $github: #111
 #join
   #header
     background-color: #fff
-  #title
-    background-color: $yellow
-    text-align: center
+    #title
+      background-color: $yellow
+      text-align: center
+      .header
+        .icon
+          font-size: 1em
+          vertical-align: baseline
   #content
     .ui.labeled.icon.button
       padding-left: 3em!important

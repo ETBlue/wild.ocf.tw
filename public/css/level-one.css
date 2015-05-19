@@ -37,6 +37,10 @@
   padding-top: 0.5rem;
 }
 
+#footer {
+  background-color: #999;
+}
+
 #home ul.bxslider {
   margin: 0;
 }
@@ -64,9 +68,13 @@
 #join #header {
   background-color: #fff;
 }
-#join #title {
+#join #header #title {
   background-color: #f2c61f;
   text-align: center;
+}
+#join #header #title .header .icon {
+  font-size: 1em;
+  vertical-align: baseline;
 }
 #join #content .ui.labeled.icon.button {
   padding-left: 3em !important;
