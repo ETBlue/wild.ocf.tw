@@ -2,6 +2,8 @@ extends _template
 
 block head
   link(rel="stylesheet",href="css/level-one.css")
+  meta(property="og:image",content="img/cover.png")
+
   block subhead
 
 block body
@@ -21,41 +23,23 @@ block body
             a.item(href="index") 首頁
             include -level-one-nav
       .right.menu
-        .desktop.laptop
-          a.item(href="join")
-            i.icon.pointing.right
-            | 加入行動
-          a.item(href="partners")
-            i.icon.announcement
-            | 媒體與合作夥伴
-          //-.ui.simple.dropdown.right.item
-            i.icon.globe
-            | 語言
-            i.icon.dropdown
-            .menu
-              .item English
-              .item 正體中文
-          //-.right.item
-            .ui.icon.input
-              input(type='text',placeholder='')
-              i.icon.search.link
-        .tablet.phone
-          //-.ui.simple.dropdown.right.item
-            i.icon.ellipsis.vertical
-            .menu
-              .item
-                .ui.icon.input
-                  input(type='text',placeholder='')
-                  i.icon.search.link
-          a.item(href="join")
-            i.icon.pointing.right
-          a.item(href="partners")
-            i.icon.announcement
-          //-.ui.simple.dropdown.right.item
-            i.icon.globe
-            .menu
-              .item English
-              .item 正體中文
+        a.item(href="join")
+          i.icon.pointing.right
+          span.desktop.laptop 加入行動
+        a.item(href="partners")
+          i.icon.announcement
+          span.desktop.laptop 媒體與合作夥伴
+        //-.ui.simple.dropdown.right.item
+          i.icon.globe
+          | 語言
+          i.icon.dropdown
+          .menu
+            .item English
+            .item 正體中文
+        //-.right.item
+          .ui.icon.input
+            input(type='text',placeholder='')
+            i.icon.search.link
         block topbar
 
   block content

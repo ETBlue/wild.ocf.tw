@@ -2,12 +2,20 @@
 @import compass/css3
 
 // semantic ui
-
 $yellow: #f2c61f
 $orange: #e07b53
 $red: #d95c5c
 $green: #5bbd72
 $blue: #3b83c0
+
+.ui.button
+  padding-left: 0.5em
+  padding-right: 0.5em
+
+
+// third party
+$hackpad: #53af98
+$github: #111
 
 .menu.simplified
   +border-radius(0)
@@ -60,14 +68,56 @@ $blue: #3b83c0
   #title
     background-color: $yellow
     text-align: center
-  #action
-    //background-color: #333
-  #subscribe
-    background-color: #333
+  #content
+    .ui.labeled.icon.button
+      padding-left: 3em!important
+      padding-right: 0.5em!important
+    .button.hackpad
+      background-color: $hackpad
+      color: #FFF
+      &:hover
+        background-color: lighten($hackpad, 5)
+    .button.github
+      background-color: $github
+      color: #FFF
+      &:hover
+        background-color: lighten($github, 10)
   .card
-    .image.photo
+    .image
       height: 8rem
       img
         object-fit: cover
-        height: 100%
         width: 100%
+        height: 100%
+    .ratio
+      width: 100%
+      padding-bottom: 52.5%
+      position: relative
+      .container
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        img
+          object-fit: cover
+          width: 100%
+          height: 100%
+          +border-radius(.2857rem .2857rem 0 0)
+    .header
+      .icon
+        line-height: inherit
+        margin: 0 0 0 0.25em
+        color: #ddd
+        +transition-property(color)
+        +transition-duration(0.2s)
+        +transition-timing-function(ease)
+      &:hover
+        .icon
+          color: #009fda
+    .bottom
+      .button
+        .pointing.right.icon
+          margin: 0 0.4em 0 -0.2em
+
+
