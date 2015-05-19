@@ -50,80 +50,85 @@ block body
             .content 付款
           .link.step.disabled
             .content 完成
-        form#form.ui.form
+        form#form.ui.form.top.padding
           .top.padding
-            .ui.horizontal.divider 您方便贊助多少金額呢？
-            .inline.fields
-              label(for='amount') 贊助金額
-              .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount',checked='')
-                  label NT$ 600
-              .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount')
-                  label NT$ 1000
-              .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount')
-                  label NT$ 3000
-              .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount')
-                  label 其他
-                input(type='text',name='custom-amount',placeholder='輸入金額...')
-          .top.padding
-            .ui.horizontal.divider 您是否需要收據？我們的收據能用於抵稅
-            .field
-              .ui.toggle.checkbox
-                input(type='checkbox',name='reciept',checked='')
-                label 開立捐款收據
-          #ifreceipt
-            .top.padding
-              .ui.horizontal.divider 要以個人名義、或法人名義開立捐款收據呢？
+            .ui.small.block.header 您方便贊助多少金額呢？
+            .horizontal.padding
               .inline.fields
-                label(for='role') 收據抬頭
+                label(for='amount') 贊助金額
                 .field
                   .ui.radio.checkbox
-                    input(type='radio',name='role',checked='')
-                    label 個人
+                    input(type='radio',name='amount',checked='')
+                    label NT$ 600
                 .field
                   .ui.radio.checkbox
-                    input(type='radio',name='role')
-                    label 法人
-              #ifpersonal
-                .three.fields
-                  .field.required
-                    label 姓氏
-                    input(type='text',name='last-name',placeholder='')
-                  .field.required
-                    label 名字
-                    input(type='text',name='first-name',placeholder='')
-                  .field.required
-                    label 身份證字號
-                    input(type='text',name='id-number',placeholder='')
-              #ifcorp
-                .two.fields
-                  .field.required
-                    label 法人全名
-                    input(type='text',name='corp-name',placeholder='')
-                  .field.required
-                    label 統一編號
-                    input(type='text',name='id-number',placeholder='')
+                    input(type='radio',name='amount')
+                    label NT$ 1000
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='amount')
+                    label NT$ 3000
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='amount')
+                    label 其他
+                  input(type='text',name='custom-amount',placeholder='輸入金額...')
+          .top.padding
+            .ui.small.block.header 您是否需要收據？我們的收據能用於抵稅
+            .horizontal.padding
+              .field
+                .ui.toggle.checkbox
+                  input(type='checkbox',name='reciept',checked='')
+                  label 開立捐款收據
+          #ifreceipt.top.padding
             .top.padding
-              .ui.horizontal.divider 您希望使用紙本收據，或電子收據？
-              .grouped.fields 收據形式
-                .field
-                  .ui.radio.checkbox
-                    input(type='radio',name='format',checked='')
-                    label 紙本收據，於年底寄送給您
-                .field
-                  .ui.radio.checkbox
-                    input(type='radio',name='format')
-                    label 電子收據，由我們向財政部申報，隔年您報稅時，自動由繳稅系統帶出此筆捐款
-              #ifpaper
+              .ui.small.block.header 要以個人名義、或法人名義開立捐款收據呢？
+              .horizontal.padding
+                .inline.fields
+                  label(for='role') 收據抬頭
+                  .field
+                    .ui.radio.checkbox
+                      input(type='radio',name='role',checked='')
+                      label 個人
+                  .field
+                    .ui.radio.checkbox
+                      input(type='radio',name='role')
+                      label 法人
+                #ifpersonal
+                  .three.fields
+                    .field.required
+                      label 姓氏
+                      input(type='text',name='last-name',placeholder='')
+                    .field.required
+                      label 名字
+                      input(type='text',name='first-name',placeholder='')
+                    .field.required
+                      label 身份證字號
+                      input(type='text',name='id-number',placeholder='')
+                #ifcorp
+                  .two.fields
+                    .field.required
+                      label 法人全名
+                      input(type='text',name='corp-name',placeholder='')
+                    .field.required
+                      label 統一編號
+                      input(type='text',name='id-number',placeholder='')
+            .top.padding
+              .ui.small.block.header 您希望使用紙本收據，或電子收據？
+              .horizontal.padding
+                .grouped.fields 收據形式
+                  .field
+                    .ui.radio.checkbox
+                      input(type='radio',name='format',checked='')
+                      label 紙本收據，於年底寄送給您
+                  .field
+                    .ui.radio.checkbox
+                      input(type='radio',name='format')
+                      label 電子收據，由我們向財政部申報，隔年您報稅時，自動由繳稅系統帶出此筆捐款
+              #ifpaper.top.padding
                 .top.padding
-                  .ui.horizontal.divider 紙本收據要寄到哪裡呢？我們會使用掛號信寄出
+                  .ui.small.block.header 紙本收據要寄到哪裡呢？我們會使用掛號信寄出
+                  .horizontal.padding
 
 
 block script
