@@ -6,6 +6,7 @@ $yellow: #f2c61f
 $orange: #e07b53
 $red: #d95c5c
 $green: #5bbd72
+$teal: #00b5ad
 $blue: #3b83c0
 
 .ui.button
@@ -53,6 +54,35 @@ $github: #111
 
 // specific pages
 
+#header
+  #title
+    text-align: center
+    position: relative
+    .image
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      img
+        object-fit: cover
+        width: 100%
+        height: 100%
+    .cover
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      //+background-image(linear-gradient(rgba(#000,0.2), rgba(#000,0.2) 50%, rgba(#000,0.5)))
+      background-color: rgba(#000,0.3)
+    .header
+      position: relative
+      z-index: 10
+      .icon
+        font-size: 1em
+        vertical-align: baseline
+
 #home
   ul.bxslider
     margin: 0
@@ -64,27 +94,21 @@ $github: #111
 
 #about
   #content
-    padding: 2rem 1rem
-    text-align: center
     background-color: #FFF
-    h1
-      font-size: 2rem
 
-#news
+#donate
   #header
-    height: 10rem
-    background-color: rgba(244, 247, 217, 1)
+    background-color: #fff
+  #mode
+    background-color: #fff
+  #content
+    background-color: #fff
 
 #join
   #header
     background-color: #fff
     #title
       background-color: $yellow
-      text-align: center
-      .header
-        .icon
-          font-size: 1em
-          vertical-align: baseline
   #content
     .ui.labeled.icon.button
       padding-left: 3em!important

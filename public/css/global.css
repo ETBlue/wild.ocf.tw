@@ -74,6 +74,10 @@ a, a:link {
   padding-bottom: 1rem;
 }
 
+.top.padding {
+  padding-top: 1rem;
+}
+
 .video.size {
   width: 100%;
   max-width: 720px;
