@@ -40,6 +40,16 @@
 #footer {
   background-color: #999;
 }
+#footer .image {
+  margin-bottom: 1rem;
+}
+#footer .ui.list .header {
+  display: inline-block;
+  margin-right: 1em;
+}
+#footer .ui.list .description {
+  display: inline;
+}
 
 #home ul.bxslider {
   margin: 0;
