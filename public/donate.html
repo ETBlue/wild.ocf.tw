@@ -1,0 +1,343 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <!-- Favicon-->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- For iOS (TODO)-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="apple-touch-icon-precomposed" href="img/app-icon/icon-60.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/app-icon/icon-76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/app-icon/icon-60@2x.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/app-icon/icon-76@2x.png"/>
+    <!-- jquery-->
+    <script type="text/javascript" src="assets/jquery-2.1.3.min.js"></script>
+    <!-- semantic ui-->
+    <link rel="stylesheet" type="text/css" href="assets/semantic-ui/1.12.0/semantic.min.css"/>
+    <script type="text/javascript" src="assets/semantic-ui/1.12.0/semantic.min.js"></script>
+    <!-- custom-->
+    <link rel="stylesheet" href="css/global.css"/>
+    <script type="text/javascript" src="js/global.js"></script>
+    <!-- for mobile, responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/level-one.css"/>
+    <meta property="og:image" content="img/cover.png"/>
+    <title>捐款贊助 | 開放文化基金會 OCF.tw 野生官網
+    </title>
+  </head>
+  <body>
+    <nav id="topbar">
+      <div class="ui borderless menu simplified horizontal wrap"><a href="join" class="fluid item"><i class="icon left chevron"></i>贊助其他專案</a></div>
+    </nav>
+    <div id="donate">
+      <section id="header">
+        <div id="title" class="horizontal wrap">
+          <div class="background image"><img src="img/cover.png"/></div>
+          <div class="cover"></div>
+          <div id="text" class="horizontal vertical padding">
+            <div class="ui two column stackable divided inverted grid">
+              <div class="six wide column align right">
+                <h1 class="ui header inverted">贊助 OCF 行政中心
+                </h1>
+              </div>
+              <div class="ten wide column">
+                <p>開設獨立帳戶、收款取款、對帳、製作報表、開立收據... 一點都不迷人的繁瑣的行政庶務，卻是在幕後默默支援所有專案、不可或缺的基礎建設。如果您無法決定要贊助哪個專案，就贊助我們吧！健康的行政中心讓所有專案都共同受益。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="mode">
+        <div class="horizontal wrap">
+          <div class="ui fluid two item green inverted pointing menu simplified"><a name="ifsingle" class="item active"><i class="icon money"></i>單筆捐款</a><a name="ifmultiple" class="item"><i class="icon money"></i>定期捐款</a></div>
+        </div>
+      </section>
+      <section id="content" class="horizontal wrap">
+        <div class="horizontal vertical padding">
+          <div id="progress" class="ui ordered steps fluid">
+            <div class="link active step">
+              <div class="content">填寫表格</div>
+            </div>
+            <div class="link step disabled">
+              <div class="content">確認資料</div>
+            </div>
+            <div class="link step disabled">
+              <div class="content">付款</div>
+            </div>
+            <div class="link step disabled">
+              <div class="content">完成</div>
+            </div>
+          </div>
+          <form id="form" class="ui warning form">
+            <div class="vertical margin">
+              <div class="ui small block header">您方便贊助多少金額呢？</div>
+              <div class="horizontal padding">
+                <div class="inline fields">
+                  <label for="amount">贊助金額</label>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="amount" value="600" checked="checked"/>
+                      <label>NT$ 600</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="amount" value="1000"/>
+                      <label>NT$ 1000</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="amount" value="3000"/>
+                      <label>NT$ 3000</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="amount" value="custom-amount"/>
+                      <label>其他</label>
+                    </div>
+                    <input type="text" name="custom-amount" placeholder="輸入金額..." class="disabled"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vertical margin">
+              <div class="ui small block header">是否需要收據？</div>
+              <div class="horizontal padding">
+                <p>我們的捐款收據可用於抵稅。</p>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="ifreceipt" value=""/>
+                    <label>開立捐款收據</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="ifreceipt" class="temporarily hidden horizontal padding">
+              <div class="vertical margin">
+                <div class="ui small dividing header">要以什麼名義開立收據呢？</div>
+                <p>依財政部規定，捐款收據需捐款人身份證字號或統一編號，申報所得稅時才可抵稅。</p>
+                <div class="inline fields">
+                  <label for="role">收據抬頭</label>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="role" value="ifpersonal" checked="checked"/>
+                      <label>個人</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="role" value="ifcorp"/>
+                      <label>法人</label>
+                    </div>
+                  </div>
+                </div>
+                <div id="ifpersonal" class="role">
+                  <div class="three fields">
+                    <div class="field required">
+                      <label>姓氏</label>
+                      <input type="text" name="last-name" placeholder=""/>
+                    </div>
+                    <div class="field required">
+                      <label>名字</label>
+                      <input type="text" name="first-name" placeholder=""/>
+                    </div>
+                    <div class="field required">
+                      <label>身份證字號</label>
+                      <input type="text" name="id-number" placeholder=""/>
+                    </div>
+                  </div>
+                </div>
+                <div id="ifcorp" class="temporarily hidden role">
+                  <div class="two fields">
+                    <div class="field required">
+                      <label>法人全名</label>
+                      <input type="text" name="corp-name" placeholder=""/>
+                    </div>
+                    <div class="field required">
+                      <label>統一編號</label>
+                      <input type="text" name="corp-number" placeholder=""/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom margin">
+                <div class="ui small dividing header">您希望使用紙本收據，或電子收據？</div>
+                <p>紙本收據：於年底寄送給您；電子收據：我們會將申報資料上傳至財政部國稅局，隔年您報稅時，自動由繳稅系統帶出此筆捐款。</p>
+                <div class="inline fields">
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="format" value="ifpaper"/>
+                      <label>紙本收據</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="format" value="ifdigital" checked="checked"/>
+                      <label>電子收據</label>
+                    </div>
+                  </div>
+                </div>
+                <div id="ifpaper" class="temporarily hidden format">
+                  <div class="vertical margin">
+                    <div class="ui small dividing header">紙本收據要寄到哪裡呢？</div>
+                    <p>我們會將紙本收據以掛號信寄出。</p>
+                    <div class="two fields">
+                      <div class="field required">
+                        <label>收件人姓名</label>
+                        <input type="text" name="reciever-name" placeholder=""/>
+                      </div>
+                      <div class="field required">
+                        <label>收件人聯絡電話</label>
+                        <input type="tel" name="reciever-phone-number" placeholder=""/>
+                      </div>
+                    </div>
+                    <div class="four fields">
+                      <div class="three wide field required">
+                        <label>縣市</label>
+                        <input type="text" name="city" placeholder=""/>
+                      </div>
+                      <div class="three wide field required">
+                        <label>鄉鎮市區</label>
+                        <input type="text" name="district" placeholder=""/>
+                      </div>
+                      <div class="two wide field">
+                        <label>郵遞區號</label>
+                        <input type="text" name="postal-code" placeholder=""/>
+                      </div>
+                      <div class="eight wide field required">
+                        <label>街道</label>
+                        <input type="text" name="address" placeholder=""/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vertical margin">
+              <div class="ui small block header">捐款徵信中，該怎麼顯示您的姓名？</div>
+              <div class="horizontal padding">
+                <p>捐款徵信文件會公開在我們的網站上，每兩個月定期更新。</p>
+                <div class="inline fields">
+                  <div class="field">
+                    <div data-ability="ifreceipt" class="ui radio checkbox disabled">
+                      <input type="radio" name="display-name" value="full"/>
+                      <label>顯示全名</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div data-ability="ifreceipt" class="ui radio checkbox disabled">
+                      <input type="radio" name="display-name" value="partial"/>
+                      <label>顯示部分姓名</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="display-name" value="anonymous"/>
+                      <label>匿名</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" name="display-name" value="custom" checked="checked"/>
+                      <label>自訂顯示名稱</label>
+                    </div>
+                    <input type="text" name="custom-display-name" placeholder=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vertical margin">
+              <div class="ui small block header">您希望收到我們的電子報嗎？</div>
+              <div class="horizontal padding">
+                <p>我們的電子報會不定期發送，平均每個月一封。</p>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="ifnewsletter" value=""/>
+                    <label>訂閱電子報</label>
+                  </div>
+                </div>
+                <div id="ifnewsletter" class="inline field required temporarily hidden">
+                  <label>您用來收電子報的 email</label>
+                  <input type="url" name="email" placeholder=""/>
+                </div>
+              </div>
+            </div>
+            <div class="ui icon right labeled green button">填寫完成，送出資料<i class="icon checkmark"></i></div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <footer id="footer">
+      <div class="horizontal wrap">
+        <div class="ui secondary inverted basic segment">
+          <div class="ui three column stackable divided grid inverted">
+            <div class="column align center">
+              <div class="ui medium image"><img src="img/logo-inverted.png"/></div>
+              <div class="ui list">
+                <div class="item"><i class="icon globe"></i>ocf.tw</div>
+                <div class="item"><i class="icon mail"></i>mail.ocf.tw@gmail.com</div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui list inverted">
+                <div class="item">
+                  <div class="header">統編</div>
+                  <div class="description">38552170</div>
+                </div>
+                <div class="item">
+                  <div class="header">銀行</div>
+                  <div class="description">玉山銀行 (808) 南桃園分行</div>
+                </div>
+                <div class="item">
+                  <div class="header">帳號</div>
+                  <div class="description">0842 940 010302</div>
+                </div>
+                <div class="item">
+                  <div class="header">戶名</div>
+                  <div class="description">財團法人開放文化基金會</div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui list inverted">
+                <div class="item">
+                  <div class="header">桃園辦公室</div>
+                </div>
+                <div class="item">
+                  <div class="header">地址</div>
+                  <div class="description">(330)桃園市桃園區中山路807號</div>
+                </div>
+                <div class="item">
+                  <div class="header">電話</div>
+                  <div class="description">(03) 220 7480</div>
+                </div>
+                <div class="item">
+                  <div class="header">傳真</div>
+                  <div class="description">(03) 220 1542</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui divider"></div>
+          <div class="float right">
+            <div class="margin left"><a href="http://blog.ocf.tw/search/label/%E6%8D%90%E6%AC%BE%E5%BE%B5%E4%BF%A1?_ga=1.255889931.1415321552.1431004220" target="_blank" class="ui right labeled icon inverted button">捐款徵信<i class="icon external square"></i></a></div>
+          </div><span>財團法人開放文化基金會於 2014 年 6 月北市文化文創字第 10331440100 號函核准成立，致力於將開放文化推廣至各相關領域，如：開放源碼、開放標準、開放硬體、開放資料、開放系統等。</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      $('.ui.form').form();
+      $('.ui.checkbox').checkbox();
+      var formtoggle = ['ifreceipt','role','format','ifnewsletter'];
+      $.each(formtoggle, function(index,value){
+        $('input[name="' + value + '"]').change(function(){
+          $('#' + value + ', .' + value).fadeToggle();
+          $('[data-ability="' + value + '"]').toggleClass('disabled');
+        });
+      });
+    </script>
+  </body>
+</html>
