@@ -40,6 +40,21 @@
 #footer {
   background-color: #999;
 }
+#footer .logo a, #footer .logo a:link {
+  color: #FFF;
+  padding: 0;
+}
+#footer .logo a .label, #footer .logo a:link .label {
+  background-color: transparent !important;
+  font-size: 1rem;
+  font-weight: normal;
+}
+#footer .logo a .label:hover, #footer .logo a:link .label:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+#footer .logo a .label .icon, #footer .logo a:link .label .icon {
+  color: #FFF;
+}
 #footer .ui.list .header {
   display: inline-block;
   margin-right: 1em;
