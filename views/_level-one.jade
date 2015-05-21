@@ -58,16 +58,23 @@ block body
           span.desktop.laptop.tablet.phone OCF.tw 官網
           //-i.icon.globe
 
-  footer#footer
+  include -footer
+  
+  //-footer#footer
     .horizontal.wrap
       .ui.secondary.inverted.basic.segment
-        .ui.three.column.stackable.grid
+        .ui.three.column.stackable.divided.grid
           .column.align.center
-            .ui.image
+            //-p 2014 年 6 月，北市文化文創字第 10331440100 號函核准成立。
+            .ui.medium.image
               img(src='img/logo-inverted.png')
-            p 民國 103 年 6 月，北市文化文創字第 10331440100 號函核准成立。
+            //-.ui.horizontal.divider.inverted 開放源碼、開放標準、開放硬體、開放資料、開放系統
+            .ui.divider
+            p
+              i.icon.mail
+              | mail.ocf.tw@gmail.com
           .column
-            .ui.divided.list.inverted
+            .ui.list.inverted
               .item
                 .header 統編
                 .description 38552170
@@ -81,7 +88,7 @@ block body
                 .header 戶名
                 .description 財團法人開放文化基金會
           .column
-            .ui.divided.list.inverted
+            .ui.list.inverted
               .item
                 .header 桃園辦公室
               .item
