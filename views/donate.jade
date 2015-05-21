@@ -22,21 +22,25 @@ block body
   #donate
     section#header
       #title.horizontal.wrap
-        .image
+        .background.image
           img(src='img/cover.png')
         .cover
-        .horizontal.vertical.padding
-          h1.ui.header.inverted
-            | 捐款贊助 
-            block project-name
-            | OCF 行政中心
+        #text.horizontal.vertical.padding
+          .ui.two.column.stackable.divided.inverted.grid
+            .six.wide.column.align.right
+              h1.ui.header.inverted
+                | 贊助 
+                block project-name
+                | OCF 行政中心
+            .ten.wide.column
+              p 開設獨立帳戶、收款取款、對帳、製作報表、開立收據... 一點都不迷人的繁瑣的行政庶務，卻是在幕後默默支援所有專案、不可或缺的基礎建設。如果您無法決定要贊助哪個專案，就贊助我們吧！健康的行政中心讓所有專案都共同受益。
     section#mode
       .horizontal.wrap
         .ui.fluid.two.item.green.inverted.pointing.menu.simplified
-          a.item.active
+          a.item.active(name='ifsingle')
             i.icon.money
             | 單筆捐款
-          a.item
+          a.item(name='ifmultiple')
             i.icon.money
             | 定期捐款
     section#content.horizontal.wrap
@@ -50,48 +54,52 @@ block body
             .content 付款
           .link.step.disabled
             .content 完成
-        form#form.ui.form
-          .top.padding
-            .ui.horizontal.divider 您方便贊助多少金額呢？
-            .inline.fields
-              label(for='amount') 贊助金額
+        form#form.ui.warning.form
+          .vertical.margin
+            .ui.small.block.header 您方便贊助多少金額呢？
+            .horizontal.padding
+              .inline.fields
+                label(for='amount') 贊助金額
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='amount',value='600',checked)
+                    label NT$ 600
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='amount',value='1000')
+                    label NT$ 1000
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='amount',value='3000')
+                    label NT$ 3000
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='amount',value='custom-amount')
+                    label 其他
+                  input(type='text',name='custom-amount',placeholder='輸入金額...').disabled
+          .vertical.margin
+            .ui.small.block.header 是否需要收據？
+            .horizontal.padding
+              p 我們的捐款收據可用於抵稅。
               .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount',checked='')
-                  label NT$ 600
-              .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount')
-                  label NT$ 1000
-              .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount')
-                  label NT$ 3000
-              .field
-                .ui.radio.checkbox
-                  input(type='radio',name='amount')
-                  label 其他
-                input(type='text',name='custom-amount',placeholder='輸入金額...')
-          .top.padding
-            .ui.horizontal.divider 您是否需要收據？我們的收據能用於抵稅
-            .field
-              .ui.toggle.checkbox
-                input(type='checkbox',name='reciept',checked='')
-                label 開立捐款收據
-          #ifreceipt
-            .top.padding
-              .ui.horizontal.divider 要以個人名義、或法人名義開立捐款收據呢？
+                .ui.checkbox
+                  input(type='checkbox',name='ifreceipt',value='')
+                  label 開立捐款收據
+          #ifreceipt.temporarily.hidden.horizontal.padding
+            .vertical.margin
+              .ui.small.dividing.header 要以什麼名義開立收據呢？
+              p 依財政部規定，捐款收據需捐款人身份證字號或統一編號，申報所得稅時才可抵稅。
               .inline.fields
                 label(for='role') 收據抬頭
                 .field
                   .ui.radio.checkbox
-                    input(type='radio',name='role',checked='')
+                    input(type='radio',name='role',value='ifpersonal',checked)
                     label 個人
                 .field
                   .ui.radio.checkbox
-                    input(type='radio',name='role')
+                    input(type='radio',name='role',value='ifcorp')
                     label 法人
-              #ifpersonal
+              #ifpersonal.role
                 .three.fields
                   .field.required
                     label 姓氏
@@ -102,30 +110,99 @@ block body
                   .field.required
                     label 身份證字號
                     input(type='text',name='id-number',placeholder='')
-              #ifcorp
+              #ifcorp.temporarily.hidden.role
                 .two.fields
                   .field.required
                     label 法人全名
                     input(type='text',name='corp-name',placeholder='')
                   .field.required
                     label 統一編號
-                    input(type='text',name='id-number',placeholder='')
-            .top.padding
-              .ui.horizontal.divider 您希望使用紙本收據，或電子收據？
-              .grouped.fields 收據形式
+                    input(type='text',name='corp-number',placeholder='')
+            .bottom.margin
+              .ui.small.dividing.header 您希望使用紙本收據，或電子收據？
+              p 紙本收據：於年底寄送給您；電子收據：我們會將申報資料上傳至財政部國稅局，隔年您報稅時，自動由繳稅系統帶出此筆捐款。
+              .inline.fields
                 .field
                   .ui.radio.checkbox
-                    input(type='radio',name='format',checked='')
-                    label 紙本收據，於年底寄送給您
+                    input(type='radio',name='format',value='ifpaper')
+                    label 紙本收據
                 .field
                   .ui.radio.checkbox
-                    input(type='radio',name='format')
-                    label 電子收據，由我們向財政部申報，隔年您報稅時，自動由繳稅系統帶出此筆捐款
-              #ifpaper
-                .top.padding
-                  .ui.horizontal.divider 紙本收據要寄到哪裡呢？我們會使用掛號信寄出
+                    input(type='radio',name='format',value='ifdigital',checked)
+                    label 電子收據
+              #ifpaper.temporarily.hidden.format
+                .vertical.margin
+                  .ui.small.dividing.header 紙本收據要寄到哪裡呢？
+                  p 我們會將紙本收據以掛號信寄出。
+                  .two.fields
+                    .field.required
+                      label 收件人姓名
+                      input(type='text',name='reciever-name',placeholder='')
+                    .field.required
+                      label 收件人聯絡電話
+                      input(type='tel',name='reciever-phone-number',placeholder='')
+                  .four.fields
+                    .three.wide.field.required
+                      label 縣市
+                      input(type='text',name='city',placeholder='')
+                    .three.wide.field.required
+                      label 鄉鎮市區
+                      input(type='text',name='district',placeholder='')
+                    .two.wide.field
+                      label 郵遞區號
+                      input(type='text',name='postal-code',placeholder='')
+                    .eight.wide.field.required
+                      label 街道
+                      input(type='text',name='address',placeholder='')
+          .vertical.margin
+            .ui.small.block.header 捐款徵信中，該怎麼顯示您的姓名？
+            .horizontal.padding
+              p 捐款徵信文件會公開在我們的網站上，每兩個月定期更新。
+              .inline.fields
+                .field
+                  .ui.radio.checkbox.disabled(data-ability='ifreceipt')
+                    input(type='radio',name='display-name',value='full')
+                    label 顯示全名
+                .field
+                  .ui.radio.checkbox.disabled(data-ability='ifreceipt')
+                    input(type='radio',name='display-name',value='partial')
+                    label 顯示部分姓名
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='display-name',value='anonymous')
+                    label 匿名
+                .field
+                  .ui.radio.checkbox
+                    input(type='radio',name='display-name',value='custom',checked)
+                    label 自訂顯示名稱
+                  input(type='text',name='custom-display-name',placeholder='')
+          .vertical.margin
+            .ui.small.block.header 您希望收到我們的電子報嗎？
+            .horizontal.padding
+              p 我們的電子報會不定期發送，平均每個月一封。
+              .field
+                .ui.checkbox
+                  input(type='checkbox',name='ifnewsletter',value='')
+                  label 訂閱電子報
+              #ifnewsletter.inline.field.required.temporarily.hidden
+                label 您用來收電子報的 email
+                input(type='url',name='email',placeholder='')
+          //-.ui.warning.message
+          .ui.icon.right.labeled.green.button
+            | 填寫完成，送出資料
+            i.icon.checkmark
+
+  include -footer
 
 
 block script
   script.
+    $('.ui.form').form();
     $('.ui.checkbox').checkbox();
+    var formtoggle = ['ifreceipt','role','format','ifnewsletter'];
+    $.each(formtoggle, function(index,value){
+      $('input[name="' + value + '"]').change(function(){
+        $('#' + value + ', .' + value).fadeToggle();
+        $('[data-ability="' + value + '"]').toggleClass('disabled');
+      });
+    });

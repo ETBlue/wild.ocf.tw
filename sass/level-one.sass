@@ -43,8 +43,6 @@ $github: #111
 
 #footer
   background-color: #999
-  .image
-    margin-bottom: 1rem
   .ui.list
     .header
       display: inline-block
@@ -56,9 +54,8 @@ $github: #111
 
 #header
   #title
-    text-align: center
     position: relative
-    .image
+    .background.image
       position: absolute
       top: 0
       bottom: 0
@@ -76,9 +73,10 @@ $github: #111
       right: 0
       //+background-image(linear-gradient(rgba(#000,0.2), rgba(#000,0.2) 50%, rgba(#000,0.5)))
       background-color: rgba(#000,0.3)
-    .header
+    #text
       position: relative
       z-index: 10
+      color: #fff
       .icon
         font-size: 1em
         vertical-align: baseline
@@ -98,17 +96,22 @@ $github: #111
 
 #donate
   #header
-    background-color: #fff
+    background-color: #ccc
   #mode
     background-color: #fff
   #content
     background-color: #fff
+  .form
+    .role
+      margin-bottom: -1rem
 
 #join
   #header
     background-color: #fff
     #title
       background-color: $yellow
+      #text
+        text-align: center
   #content
     .ui.labeled.icon.button
       padding-left: 3em!important

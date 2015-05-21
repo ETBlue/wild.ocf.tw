@@ -25,12 +25,8 @@ a, a:link {
   color: inherit;
 }
 
-.hidden {
+.temporarily.hidden {
   display: none;
-}
-
-.no.margin {
-  margin: 0;
 }
 
 .float.right {
@@ -43,6 +39,10 @@ a, a:link {
 
 .align.center {
   text-align: center;
+}
+
+.align.right {
+  text-align: right;
 }
 
 .inline.block {
@@ -76,6 +76,23 @@ a, a:link {
 
 .top.padding {
   padding-top: 1rem;
+}
+
+.vertical.margin {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bottom.margin {
+  margin-bottom: 2rem;
+}
+
+.no.margin {
+  margin: 0;
+}
+
+.margin.left {
+  margin-left: 1rem;
 }
 
 .video.size {
